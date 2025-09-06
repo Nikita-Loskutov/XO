@@ -16,6 +16,7 @@ body {
     background: linear-gradient(45deg, #474747,#868686,#ffffff);                                       
     background-size: 800% 800%;
     animation: gradientShift 5s ease infinite;
+    -webkit-tap-highlight-color: transparent;
 }
 
 @keyframes gradientShift {
