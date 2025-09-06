@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Крестики-нолики — улучшенная версия</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+    <main class="board-wrap" aria-labelledby="title">
+        <h1 id="title" style="font-size:18px">Крестики — Нолики</h1>
+
+        <div class="score-row">
+            <div class="score score-o">Нолики: <span id="scoreO" class="value">0</span></div>
+            <div id="turnIndicator" class="turn">Ход: Нолик</div>
+            <div class="score score-x">Крестики: <span id="scoreX" class="value">0</span></div>
+        </div>
+
+
+        <section class="board" role="grid" aria-label="Игровое поле">
+            <button class="cell" role="gridcell" aria-label="Клетка 1" data-index="0"><img class="mark" alt="" src=""></button>
+            <button class="cell" role="gridcell" aria-label="Клетка 2" data-index="1"><img class="mark" alt="" src=""></button>
+            <button class="cell" role="gridcell" aria-label="Клетка 3" data-index="2"><img class="mark" alt="" src=""></button>
+            <button class="cell" role="gridcell" aria-label="Клетка 4" data-index="3"><img class="mark" alt="" src=""></button>
+            <button class="cell" role="gridcell" aria-label="Клетка 5" data-index="4"><img class="mark" alt="" src=""></button>
+            <button class="cell" role="gridcell" aria-label="Клетка 6" data-index="5"><img class="mark" alt="" src=""></button>
+            <button class="cell" role="gridcell" aria-label="Клетка 7" data-index="6"><img class="mark" alt="" src=""></button>
+            <button class="cell" role="gridcell" aria-label="Клетка 8" data-index="7"><img class="mark" alt="" src=""></button>
+            <button class="cell" role="gridcell" aria-label="Клетка 9" data-index="8"><img class="mark" alt="" src=""></button>
+        </section>
+
+        <div class="controls">
+            <button id="clearScores" class="btn" type="button">Очистить счёт</button>
+            <button id="restartButtonFooter" class="btn" type="button">Новая игра</button>
+        </div>
+
+        <dialog id="resultDialog" aria-label="Результат игры">
+            <div style="text-align:center">
+                <p id="resultText"> </p>
+                <div class="dialog-actions">
+                    <button id="playAgain" class="btn">Ещё раз?</button>
+                    <button id="closeResult" class="btn">Закрыть</button>
+                </div>
+            </div>
+        </dialog>
+    </main>
+</body>
+</html>
